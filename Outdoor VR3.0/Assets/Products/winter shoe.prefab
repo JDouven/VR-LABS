@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &126696
 GameObject:
@@ -34,7 +34,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &155098
 GameObject:
@@ -52,7 +52,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &169472
 GameObject:
@@ -68,7 +68,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &185034
 GameObject:
@@ -79,14 +79,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 421182}
   - 65: {fileID: 6535738}
-  - 114: {fileID: 11452030}
+  - 114: {fileID: 11419276}
   m_Layer: 0
   m_Name: winter shoe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!4 &406248
 Transform:
   m_ObjectHideFlags: 1
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material1: {fileID: 2100000, guid: 208f739ee04a8a940b374207ad8cec08, type: 2}
   material2: {fileID: 2100000, guid: 369344182e465e3468ee0be2a03b5e8f, type: 2}
---- !u!114 &11452030
+--- !u!114 &11419276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -299,10 +299,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 185034}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae594f1ac0d0f24fb6227339e9274c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4d5ba7df1d68847a271d05f94681a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 0.025, z: 0}
+  material1: {fileID: 0}
+  material2: {fileID: 0}
 --- !u!114 &11476650
 MonoBehaviour:
   m_ObjectHideFlags: 1

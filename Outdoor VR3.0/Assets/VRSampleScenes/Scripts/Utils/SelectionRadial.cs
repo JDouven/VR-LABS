@@ -123,7 +123,7 @@ namespace VRStandardAssets.Utils
         }
 
 
-        private void HandleDown()
+        public void HandleDown()
         {
             // If the radial is active start filling it.
             if (m_IsSelectionRadialActive)
@@ -133,7 +133,7 @@ namespace VRStandardAssets.Utils
         }
 
 
-        private void HandleUp()
+        public void HandleUp()
         {
             // If the radial is active stop filling it and reset it's amount.
             if (m_IsSelectionRadialActive)

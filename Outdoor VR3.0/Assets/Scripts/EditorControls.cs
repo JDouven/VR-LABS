@@ -5,7 +5,7 @@ public class EditorControls : MonoBehaviour
 {
 
 
-#if UNITY_EDITOR
+
 
     public EditorCameraControls cameraControls;
     public float speed = 2f;
@@ -33,11 +33,15 @@ public class EditorControls : MonoBehaviour
             cc.SimpleMove(transform.right * speed * h);
         }
 
+        #if UNITY_EDITOR
+
         float x = Input.GetAxis("Joystick Look X");
         transform.Rotate(transform.up, x);
 
         float y = Input.GetAxis("Joystick Look Y");
         cameraControls.RotateY(y);
+
+        #endif
     }
-#endif
+
 }
