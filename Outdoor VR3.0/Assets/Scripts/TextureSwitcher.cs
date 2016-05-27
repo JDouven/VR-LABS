@@ -16,11 +16,11 @@ public class TextureSwitcher : MonoBehaviour
 
     public void SwitchTextures()
     {
-        if(renderer.material.mainTexture == material1.mainTexture)
+        if (renderer.material.mainTexture == material1.mainTexture)
         {
             renderer.material = material2;
         }
-        else if(renderer.material.mainTexture == material2.mainTexture)
+        else if (renderer.material.mainTexture == material2.mainTexture)
         {
             renderer.material = material1;
         }

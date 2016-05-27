@@ -62,7 +62,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 454248}
-  - 114: {fileID: 11405024}
+  - 114: {fileID: 11456020}
   m_Layer: 0
   m_Name: ShoesMeshes
   m_TagString: Untagged
@@ -267,17 +267,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5247597, y: 0.26974386, z: 0.3571361}
   m_Center: {x: -0.00007200241, y: 0.11079574, z: -0.0032365322}
---- !u!114 &11405024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 169472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5dd7b70f6732ff46b213ad16bb8a61a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11410158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,8 +291,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4d5ba7df1d68847a271d05f94681a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material1: {fileID: 0}
-  material2: {fileID: 0}
+  material1: {fileID: 2100000, guid: 208f739ee04a8a940b374207ad8cec08, type: 2}
+  material2: {fileID: 2100000, guid: 369344182e465e3468ee0be2a03b5e8f, type: 2}
+  switcher: {fileID: 0}
+--- !u!114 &11456020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 169472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd17eeb5129d8b4aa4ecf5aabe98aae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11476650
 MonoBehaviour:
   m_ObjectHideFlags: 1

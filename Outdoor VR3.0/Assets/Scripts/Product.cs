@@ -6,16 +6,25 @@ public class Product : MonoBehaviour
     public Material material1;
     public Material material2;
 
+    [HideInInspector]
+    public ColorSwitcher switcher;
+
     private new Renderer renderer;
+    private TextureSwitchMain ts;
 
     public void Awake()
     {
         renderer = GetComponent<Renderer>();
+        if(renderer == null)
+        {
+            ts = GetComponent<TextureSwitchMain>();
+        }
     }
 
     public void SetActive(bool active)
     {
         gameObject.SetActive(active);
+        switcher.enabled = active;
     }
 
     public bool IsActive()
@@ -25,13 +34,20 @@ public class Product : MonoBehaviour
 
     public void SwitchTextures()
     {
-        if (renderer.material.mainTexture == material1.mainTexture)
+        if (renderer != null)
         {
-            renderer.material = material2;
+            if (renderer.material.mainTexture == material1.mainTexture)
+            {
+                renderer.material = material2;
+            }
+            else if (renderer.material.mainTexture == material2.mainTexture)
+            {
+                renderer.material = material1;
+            }
         }
-        else if (renderer.material.mainTexture == material2.mainTexture)
+        else
         {
-            renderer.material = material1;
+            ts.Switch();
         }
     }
 }

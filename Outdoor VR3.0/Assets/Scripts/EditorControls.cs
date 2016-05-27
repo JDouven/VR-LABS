@@ -3,12 +3,9 @@ using System.Collections;
 
 public class EditorControls : MonoBehaviour
 {
-
-
-
-
     public EditorCameraControls cameraControls;
     public float speed = 2f;
+    public bool oculusMode = true;
 
     private CharacterController cc;
 
@@ -21,27 +18,39 @@ public class EditorControls : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-
-        if (v != 0)
+        if (Input.GetKeyUp(KeyCode.JoystickButton7))
         {
-            cc.SimpleMove(transform.forward * speed * v);
+            oculusMode = true;
         }
-        if (h != 0)
+        if (Input.GetKeyUp(KeyCode.JoystickButton6))
         {
-            cc.SimpleMove(transform.right * speed * h);
+            oculusMode = false;
         }
 
-        #if UNITY_EDITOR
+        if (oculusMode)
+        {
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
 
-        float x = Input.GetAxis("Joystick Look X");
-        transform.Rotate(transform.up, x);
+            if (v != 0)
+            {
+                cc.SimpleMove(transform.forward * speed * v);
+            }
+            if (h != 0)
+            {
+                cc.SimpleMove(transform.right * speed * h);
+            }
 
-        float y = Input.GetAxis("Joystick Look Y");
-        cameraControls.RotateY(y);
+#if UNITY_EDITOR
 
-        #endif
+            float x = Input.GetAxis("Joystick Look X");
+            transform.Rotate(transform.up, x);
+
+            float y = Input.GetAxis("Joystick Look Y");
+            cameraControls.RotateY(y);
+
+#endif
+        }
     }
 
 }
