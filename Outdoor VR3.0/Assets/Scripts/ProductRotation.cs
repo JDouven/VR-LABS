@@ -9,7 +9,6 @@ public class ProductRotation : MonoBehaviour
 
     public void Awake()
     {
-        controls = GameObject.Find("Player").GetComponent<EditorControls>();
     }
 
     // Update is called once per frame
