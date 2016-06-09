@@ -5,6 +5,8 @@ public class Product : MonoBehaviour
 {
     public Material material1;
     public Material material2;
+    public GameObject colorChanger1;
+    public GameObject colorChanger2;
 
     [HideInInspector]
     public ColorSwitcher switcher;
@@ -19,18 +21,23 @@ public class Product : MonoBehaviour
         {
             ts = GetComponent<TextureSwitchMain>();
         }
+        colorChanger1 = GetComponent<GameObject>();
+        colorChanger2 = GetComponent<GameObject>();
     }
 
     public void SetActive(bool active)
     {
         gameObject.SetActive(active);
         switcher.enabled = active;
+        //colorChanger1.SetActive(active);
+        //colorChanger2.SetActive(active);
     }
 
     public bool IsActive()
     {
         return gameObject.activeSelf;
     }
+
 
     public void SwitchTextures()
     {

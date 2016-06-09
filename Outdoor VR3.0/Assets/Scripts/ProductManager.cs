@@ -7,6 +7,8 @@ public class ProductManager : MonoBehaviour
     public Product shoes2;
     public Product tent1;
     public Product tent2;
+    public GameObject colorChanger1;
+    public GameObject colorChanger2;
 
     private ColorSwitcher shoes1Switcher;
     private ColorSwitcher shoes2Switcher;
@@ -19,7 +21,7 @@ public class ProductManager : MonoBehaviour
         shoes1Switcher = GameObject.Find("MenuItem (1)").GetComponentInChildren<ColorSwitcher>();
         shoes2Switcher = GameObject.Find("MenuItem (2)").GetComponentInChildren<ColorSwitcher>();
         tent1Switcher = GameObject.Find("MenuItem (3)").GetComponentInChildren<ColorSwitcher>();
-        tent2Switcher = GameObject.Find("MenuItem (4)").GetComponentInChildren<ColorSwitcher>();
+        tent2Switcher = GameObject.Find("MenuItem (4)").GetComponentInChildren<ColorSwitcher>();;
 
         shoes1.switcher = shoes1Switcher;
         shoes2.switcher = shoes2Switcher;
@@ -68,7 +70,7 @@ public class ProductManager : MonoBehaviour
     {
         if (tent1.IsActive())
         {
-            tent1.SetActive(false);
+            tent1.SetActive(false);            
         }
         else
         {

@@ -9,7 +9,7 @@ public class ColorSwitcher : MonoBehaviour
     private VRInteractiveItem events;
     private bool gazeOver = false;
     private MenuTile.ProductType type;
-    private TextureSwitcherCube texSwitch;
+    //private TextureSwitcherCube texSwitch;
     private ProductManager manager;
 
     // Use this for initialization
@@ -17,7 +17,7 @@ public class ColorSwitcher : MonoBehaviour
     {
         events = GetComponent<VRInteractiveItem>();
         type = GetComponentInParent<MenuTile>().type;
-        texSwitch = GetComponent<TextureSwitcherCube>();
+        //texSwitch = GetComponent<TextureSwitcherCube>();
         manager = GetComponentInParent<Transform>().GetComponentInParent<ProductManager>();
     }
 
@@ -47,7 +47,7 @@ public class ColorSwitcher : MonoBehaviour
         if (gazeOver)
         {
             //Switch colors of block and switch product color
-            texSwitch.SwitchTextures();
+            //texSwitch.SwitchTextures();
             switch (type)
             {
                 case MenuTile.ProductType.shoe1:
